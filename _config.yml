@@ -3,7 +3,7 @@ title:               README
 tagline:             
 description:         '프로젝트를 진행하면서 만나는 <br>기술과 에러 <br>+나의 생각을 기록하는 공간입니다<br><br><a href="https://github.com/TaewoooongHeo01" target="_blank"><img style="width: 35px; height: 35px" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"></a>'
 url:                 https://TaewoooongHeo01.github.io
-baseurl:             'https://taewoooongheo01.github.io/TaewoooongHeo01/'
+baseurl:             '/TaewoooongHeo01'
 paginate:            5
 permalink:           pretty
 
