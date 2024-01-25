@@ -6,16 +6,18 @@ layout: default
   <h1 class="page-title">{{ page.title }}</h1>
   <div>
     {% for post in site.categories[page.category] %}
-    <div class="post">
+    <hr>
+    <div class="post postThumbnail">
       <h2 class="post-title">
         <a href="{{ post.url | absolute_url }}" style="font-weight: 600; color: rgb(41, 116, 255);">
           {{ post.title }}
         </a>
       </h2>
+      <p class="post-excerpt">{{ post.excerpt }}</p>
       <span class="post-date">{{ post.date | date_to_string }}</span>
     </div>
+    <hr>
     {% endfor %}
-    {{ content }}
   </div>
 </div>
 
@@ -26,4 +28,3 @@ layout: default
 {% if page.next %}
   <a href="{{ page.next.url }}">Next: {{ page.next.title }}</a>
 {% endif %}
-

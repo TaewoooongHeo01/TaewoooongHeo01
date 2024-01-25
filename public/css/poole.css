@@ -104,11 +104,24 @@ h4, h5, h6 {
 }
 
 /* Body text */
+.postThumbnail p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.4rem;
+  color: rgb(168, 168, 168);
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
+}
+
 p {
   margin-top: 1rem;
   margin-bottom: 1rem;
   line-height: 2;
 }
+
 
 strong {
   color: #303030;
