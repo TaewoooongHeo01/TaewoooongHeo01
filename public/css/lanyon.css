@@ -53,8 +53,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-weight: 800;
   color: #313131;
+  padding-top: 2rem;
   letter-spacing: -.025rem;
 }
+
+/* body > div.wrap > div.container.content > div.related > ul > li > h3 {
+  padding-top: -2rem;
+} */
 
 
 /*
