@@ -31,7 +31,7 @@ public class Diet {
 	@Column(name = "DIET_ID")  
 	private Long id;  
 	  
-	private List<DietFood> dietfoods = new ArrayList<>();
+	private List<Food> dietfoods = new ArrayList<>();
 }
 {% endhighlight %}
 
@@ -43,7 +43,7 @@ public class Food {
 	@Column(name = "FOOD_ID")
 	private Long id;  
 	  
-	private List<DietFood> foodDiets = new ArrayList<>();
+	private List<Diet> foodDiets = new ArrayList<>();
 }
 {% endhighlight %}
 
