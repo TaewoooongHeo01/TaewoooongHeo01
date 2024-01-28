@@ -318,6 +318,8 @@ tbody tr:nth-child(odd) th {
   padding-top:    1rem;
   padding-bottom: 1rem;
   margin-bottom: 3rem;
+  background-image: url("https://i.imgur.com/joGUuZ9.jpg");
+  background-size: cover;
 }
 .masthead-title {
   margin-top: 0;
