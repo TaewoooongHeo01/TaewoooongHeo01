@@ -4,16 +4,19 @@ title: Home
 published: true
 ---
 
-<h3>안녕하세요👋&nbsp 프로젝트를 진행하며 배운 것들을 기록하는 공간입니다.</h3>
+<h3>안녕하세요👋&nbsp 프로젝트를 진행하며 배운 것들을 기록하는 공간입니다.
+    <br>➯ <a href="http://localhost:4000/TaewoooongHeo01/Archives/">Archives</a>
+</h3>
 
-<div class="posts">
-  {% assign posts_grouped_by_year = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
-  {% for year_group in posts_grouped_by_year %}
-    <h2 class="year" style="margin-top: 3rem; font-weight: 900; color: rgb(141, 141, 141);">🗓 {{ year_group.name }}</h2>
-    {% for post in year_group.items %}
-    <div class="post">
-      <span>📌 {{ post.date | date: "%m_%d" }}</span> ➯ <a href="{{ post.url | absolute_url }}" style="font-weight: 600; color: rgb(41, 116, 255);">{{ post.title }}</a>
+{% for post in site.posts %}
+    <hr>
+    <div class="post postThumbnail">
+      <h2 class="post-title">
+        <a href="{{ post.url | absolute_url }}" style="font-weight: 600; color: rgb(41, 116, 255);">
+          {{ post.title }}
+        </a>
+      </h2>
+      <p class="post-excerpt">{{ post.excerpt }}</p>
+      <span class="post-date">{{ post.date | date_to_string }}</span>
     </div>
-    {% endfor %}
-  {% endfor %}
-</div>
+{% endfor %}
