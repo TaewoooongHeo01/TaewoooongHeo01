@@ -158,3 +158,7 @@ INNER JOIN DietFood df ON d.id = df.diet_id
 WHERE df.food_id = :food_id
 {% endhighlight %}
 
+### 참고
+[다대다 연관관계](https://seriouskang.tistory.com/7)
+
+[만렙 개발자 키우기 - (4)다대다](https://www.nowwatersblog.com/jpa/ch6/6-4)
