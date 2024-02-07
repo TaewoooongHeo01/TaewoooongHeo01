@@ -86,18 +86,19 @@ h1, h2, h3, h4, h5, h6 {
  */
 
 .container {
-  max-width: 28rem;
+  max-width: 32rem; /* 수정 */
 }
 @media (min-width: 38em) {
   .container {
-    max-width: 32rem;
+    max-width: 36rem; /* 수정 */
   }
 }
 @media (min-width: 56em) {
   .container {
-    max-width: 36rem;
+    max-width: 40rem; /* 수정 */
   }
 }
+
 
 
 /*

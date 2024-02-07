@@ -19,7 +19,9 @@ public class MemberRepository {
    //code
 }
 {% endhighlight %}
-`@PersistenceContext` 에 대해 좀 더 자세히 설명하자면, 스프링 컨테이너로부터 `EntityManager` 를 주입받는 기능을 한다. 즉, 스프링 컨테이너가 관리하는 `EntityManager` 를 주입받게 된다. 이 방법은 `EntityManagerFactory` 를 직접 만들어 사용하는 방법과 달리, `EntityManager` 의 생명주기를 따로 관리하지 않아도 된다는 장점이 있다. 추가로 `EntityManager` 와 그에 연결된 영속성 컨텍스트가 현재 트랜잭션의 생명주기와 동일하게 관리된다.
+`@PersistenceContext` 에 대해 좀 더 자세히 설명하자면, 스프링 컨테이너로부터 `EntityManager` 를 주입받는 기능을 한다. 즉, 스프링 컨테이너가 관리하는 `EntityManager` 를 주입받게 된다. 
+
+이 방법은 `EntityManagerFactory` 를 직접 만들어 사용하는 방법과 달리, `EntityManager` 의 생명주기를 따로 관리하지 않아도 된다는 장점이 있다. 추가로 `EntityManager` 와 그에 연결된 영속성 컨텍스트가 현재 트랜잭션의 생명주기와 동일하게 관리된다.
 
 `@Autowired` 를 통해 주입 받을 수도 있다.(생성자 주입 방식 사용하기)
 {% highlight Java%}
@@ -131,7 +133,9 @@ class MemberRepositoryTest {
 
 스프링 컨테이너가 관리하는 `EntityManager` 빈은 "싱글톤"이 맞다. 하지만 `@PersistenceContext`를 통해 주입되는 `EntityManager`는 실제로는 "프록시" 객체이다. 이 프록시 객체는 모든 쓰레드에서 동일하다. 
 
-하지만 실제로 동작할 때, 엔티티 매니저 프록시는 각 트랜잭션에 적합한 별도의 EntityManager 인스턴스를 생성하고 사용한다. 스프링 부트의 기본 설정에서는 영속 컨텍스트가 트랜잭션 단위로 생성되고, 같은 트랜잭션에서는 항상 같은 엔티티 매니저가 사용된다. 하나의 프로세스에서 여러 트랜잭션을 동시에 처리해도, 각 트랜잭션은 알맞은 엔티티매니저가 있고 그걸 프록시가 구별해서 할당해주기 때문에 문제가 동시성 문제는 발생하지 않는다.
+하지만 실제로 동작할 때, 엔티티 매니저 프록시는 각 트랜잭션에 적합한 별도의 EntityManager 인스턴스를 생성하고 사용한다. 
+
+스프링 부트의 기본 설정에서는 영속 컨텍스트가 트랜잭션 단위로 생성되고, 같은 트랜잭션에서는 항상 같은 엔티티 매니저가 사용된다. 하나의 프로세스에서 여러 트랜잭션을 동시에 처리해도, 각 트랜잭션은 알맞은 엔티티매니저가 있고 그걸 프록시가 구별해서 할당해주기 때문에 문제가 동시성 문제는 발생하지 않는다.
 
 ### 참고
 [인프런 질문](https://www.inflearn.com/questions/158967/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94-entitymanager%EC%97%90-%EB%8C%80%ED%95%B4-%EA%B6%81%EA%B8%88%ED%95%9C-%EC%A0%90%EC%9D%B4-%EC%9E%88%EC%96%B4-%EC%A7%88%EB%AC%B8-%EB%82%A8%EA%B9%81%EB%8B%88%EB%8B%A4)
