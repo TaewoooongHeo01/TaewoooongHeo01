@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Spring
+title: Spring,&nbsp JPA
 category: Spring
 published: true
 ---

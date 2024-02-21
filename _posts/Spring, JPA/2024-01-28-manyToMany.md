@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 다대다[M:N] 극복하기
-category: JPA
+category: Spring
 excerpt: "`@ManyToMany` 는 함정이 있다. 바로 필드가 추가되어야 하는 경우에 필드를 추가할 수 없다는 것이다. 따라서 `@ManyToMany` 는 쓰지 않는게 좋다. 그렇다면 @ManyToMany는 아예 쓰면 안되는걸까? 처음엔 명백히 필드가 추가될 가능성이 없다면 그냥 써도 되겠다고 생각했다. 하지만 `@ManyToMany` 는 추가적인 문제가 여럿 있었다.대표적으론 성능과 관련한 문제가 있다. 
 `@ManyToMany` 를 통해 중간테이블을 자동생성한 경우, 중간테이블을 JPA가 관리하게 된다."
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 페치 조인(fetch join)의 필요성 - EAGER, LAZY, JOIN 그리고 N+1 문제
-category: JPA
+category: Spring
 excerpt: "N+1 문제를 통해 페치 조인(fetch join)이 왜 필요한지 이해하고, 개인적으로 헷갈렸던 EAGER, LAZY, JOIN, JOIN FETCH 의 정확한 차이점을 정리하고자 쓴 글이다. JPQL은 즉시로딩 그런거 모른다. 만약 쿼리를 'select m from Member m' 라고 짰다면, DB 에서 Member 만을 SELECT 한다. 하지만, 이때 즉시로딩으로 설정되어 있으므로 JPA에서 추가적인 SELECT 쿼리가 'select m from Member m' 시점에 같이 나간다. 즉, JOIN을 하지 않고 같은 시점에 한번 더 SELECT를 하기 때문에 N+1 문제가 해결되지 않는게 맞다. 로딩전략을 바꾸는 것 만으로는 N+1 문제를 해결할 수 없음을 알았다."
 ---
 

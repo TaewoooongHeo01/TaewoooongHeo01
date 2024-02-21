@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Entity Manager 의 동시성 문제 의문 해결과정
-category: JPA
+category: Spring
 excerpt: "코드에서 여러 스레드가 동시에 saveAndPrint 메소드를 호출하고 있음에도 불구하고, 각 Member는 제대로 저장되고 있다. 이는 엔티티 매니저가 각각의 트랜잭션마다 독립적으로 작동하기 때문이다. 또한, 결과에서 EntityManager의 클래스 이름이 jdk.proxy3.$Proxy108로 출력되는 것을 볼 수 있다. 이는 EntityManager가 실제로 프록시로 감싸져 있음을 알 수 있다.스프링컨테이너가 관리하는 엔티티 매니저 빈은 싱글톤이 맞다. 하지만 @PersistenceContext 를 통해 EntityManager 객체에 실제로 DI 되는 엔티티매니저는 프록시객체였다. 위에서 확인한 결과와"
 ---
 
