@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Frontend Tech & Works
+title: Frontend & Works
 category: frontWorks
 published: true
 ---
