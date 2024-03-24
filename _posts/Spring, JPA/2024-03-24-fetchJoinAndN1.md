@@ -20,7 +20,7 @@ excerpt: "N+1 문제를 통해 페치 조인(fetch join)이 왜 필요한지 이
 
 두 엔티티는 `지연로딩` 으로 설정했다. 
 이전에 지연로딩에 대해 쓴 글이 있다. 기억이 잘 안난다면 보고 오십쇼 
--> [지연로딩을 통한 성능최적화 + 프록시에 대한 구체적 이해](https://taewoooongheo01.github.io/TaewoooongHeo01/jpa/2024/01/30/lazyAndProxy/)
+-> [지연로딩을 통한 성능최적화 + 프록시에 대한 구체적 이해](https://taewoooongheo01.github.io/TaewoooongHeo01/spring/2024/01/30/lazyAndProxy/)
 {% highlight Java%}
 @Entity  
 @Getter  
