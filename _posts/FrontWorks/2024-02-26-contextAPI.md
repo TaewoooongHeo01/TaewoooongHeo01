@@ -7,7 +7,7 @@ excerpt: "컴포넌트 간 데이터 공유를 위해선 props 를 사용한다�
 ---
 
 아래의 프로젝트와 이어집니다.<br>
--> [Jackson 직렬화 순환참조 에러 해결하기](https://taewoooongheo01.github.io/TaewoooongHeo01/spring/2024/03/11/jackson/)
+-> [Jackson 직렬화 순환참조 에러 해결하기](https://taewoooongheo01.github.io/TaewoooongHeo01/spring/2024/03/15/jackson/)
 
 간략하게 상황을 설명하자면, 음식 재료정보 리스트를 BE 에서 FE 로 전달받았다. 
 
