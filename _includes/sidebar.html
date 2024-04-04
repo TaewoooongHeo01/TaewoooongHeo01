@@ -20,7 +20,7 @@
     {% assign pages_list = site.pages | sort:"url" %}
     {% for node in pages_list %}
       {% if node.title != null %}
-        {% if node.layout == "page" or node.layout == "archives" %}
+        {% if node.layout == "page"%}
           <!--layout이 page로 설정되어 있으면 동적으로 사이드바에 페이지 추가-->
           <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url | absolute_url }}">{{ node.title }}</a>
         {% endif %}

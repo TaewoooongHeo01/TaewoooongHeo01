@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React - ContextAPI 를 통한 컴포넌트 간 데이터 공유
-category: frontWorks
+category: Others
 excerpt: "컴포넌트 간 데이터 공유를 위해선 props 를 사용한다고 알고 있어 어떻게 구현할 지 생각해봤다. 
 기본적으로 props 는 부모-자식 관계의 컴포넌트 간 데이터를 공유할 때 사용한다. 하지만 위 기능을 props 로 구현하기엔 너무 불편한 것 같다. props 가 너무 많고, 만약 추후에 props 가 추가된다면 수많은 코드의 수정이 필요할 것이다. 그래서 나는 다른 방법을 찾아봤고, ContextAPI 를 발견했다."
 ---
