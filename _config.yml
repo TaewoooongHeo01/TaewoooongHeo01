@@ -34,3 +34,10 @@ google_analytics_id: G-2FDJJ0DP10
 
 google_site_verification: fpHIZwUl25zQL72Z8DsFHC2G97GmToki09OquVoMkyE
 
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
